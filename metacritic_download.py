@@ -1,3 +1,5 @@
+#!/home/cspear/.venv/pitchfork-reviews/bin/python
+
 # # The impact of a Pitchfork review on Spotify listeners
 
 # I need:
