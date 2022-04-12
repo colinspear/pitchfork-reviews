@@ -84,11 +84,11 @@ print("Harvest complete, dumping harvest in storage silos...")
 
 dt = datetime.datetime.today().strftime('%Y-%m-%d')
 
-ad_string = f"data/raw/metacritic/{dt}_coming-soon_date.pkl"
+ad_string = f"../data/raw/metacritic/{dt}_coming-soon_date.pkl"
 albums_date.to_pickle(ad_string)
 print(f"Data harvest safely written to storage silo {ad_string}")
 
-an_string = f"data/raw/metacritic/{dt}_coming-soon_no-date.pkl"
+an_string = f"../data/raw/metacritic/{dt}_coming-soon_no-date.pkl"
 albums_no_date.to_pickle(an_string)
 print(f"Data harvest safely written to storage silo {an_string}")
 

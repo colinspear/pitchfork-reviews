@@ -40,11 +40,8 @@ def get_source(pg_num=''):
     with Chrome(options=opts) as driver:
         try:
             driver.get(f'https://www.albumoftheyear.org/upcoming/{pg_num}/')
-            # driver.get('https://www.albumoftheyear.org/2022/releases/april-04.php')
             time.sleep(5)
             source = driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-            # source = driver.find_element(by=By.XPATH, value='//button')
-            # source = driver.find_element(by=By.XPATH, value='//largebutton[text()="Show More"]').click()
             soup = BeautifulSoup(source, 'html.parser')
             album_blocks = soup.find_all('div', {'class': 'albumBlock'})
             return get_releases(album_blocks)
@@ -63,7 +60,7 @@ for i in range(1,13):
 
 df = pd.DataFrame(releases, columns=['time', 'date', 'title', 'name'])
 dt = datetime.datetime.today().strftime('%Y-%m-%d')
-file_path = f"./data/raw/aoty/{dt}_upcoming.pkl"
+file_path = f"../data/raw/aoty/{dt}_upcoming.pkl"
 df.to_pickle(file_path)
 
 print(f"Data harvest safely written to storage silo {file_path}")
