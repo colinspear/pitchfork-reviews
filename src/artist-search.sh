@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 source .env
 
 CLIENT_ID=$CLIENT_ID

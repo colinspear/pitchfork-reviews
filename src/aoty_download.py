@@ -1,4 +1,4 @@
-#!/home/cspear/.venv/pitchfork-reviews/bin/python
+#!/usr/bin/env python3
 
 import time
 import datetime
