@@ -1,4 +1,4 @@
-#!/home/cspear/.venv/pitchfork-reviews/bin/python
+#!/usr/bin/env python
 
 import time
 import datetime
@@ -50,6 +50,7 @@ def get_source(pg_num=''):
 
 releases = [] 
 releases = releases + get_source()
+
 
 for i in range(1,13):
     try:
