@@ -45,7 +45,7 @@ ACCESS_TOKEN=$( curl -s -X POST --url "https://accounts.spotify.com/api/token" \
     | jq -r '.access_token' )
 
 # TODO: get latest artist list
-artist_list="$PROJECT_PATH/data/processed/2022-08-18-artists-unique.txt"
+artist_list="$PROJECT_PATH/data/processed/2022-10-17-artists-unique.txt"
 
 dt=$( date --rfc-3339='date' )
 artist_data="$PROJECT_PATH/data/processed/$dt-sp_data.csv"
